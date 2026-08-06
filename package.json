@@ -1,0 +1,29 @@
+{
+  "name": "trimtokyo-ai-chatbot",
+  "version": "1.0.0",
+  "description": "Production-Ready AI Chatbot for Trim Tokyo",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "build:server": "npm run build -w server",
+    "build:client": "npm run build -w client",
+    "start:server": "npm run start -w server",
+    "lint:server": "npm run lint -w server",
+    "typecheck:server": "npm run typecheck -w server",
+    "db:seed": "ts-node -O \"{\\\"module\\\": \\\"commonjs\\\"}\" scripts/seed.ts",
+    "db:restore": "ts-node -O \"{\\\"module\\\": \\\"commonjs\\\"}\" scripts/restore_from_dump.ts"
+  },
+  "keywords": [
+    "trimtokyo",
+    "ai",
+    "chatbot",
+    "salon-assistant"
+  ],
+  "author": "",
+  "license": "ISC"
+}

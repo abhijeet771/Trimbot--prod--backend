@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Local env files (CRITICAL SECURITY)
+.env
+.env.example
+.env.*
+!.env.example
+
+# Build and Compilation outputs
+dist/
+**/dist/
+build/
+**/build/
+out/
+.next/
+*.tsbuildinfo
+
+# Logs and Debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+**/logs/
+*.log
+
+# IDEs, Editors, and OS Files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Agent Sandbox Caches
+.gemini/
+.agents/
+.system_generated/
+.antigravityignore
+**/C:\Users\paswa\.gemini/**
