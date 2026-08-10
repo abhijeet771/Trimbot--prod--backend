@@ -161,7 +161,7 @@ export class SalonController {
             saturday: '9:00 AM - 8:00 PM',
             sunday: '9:00 AM - 6:00 PM (Ken Tanaka closed)'
           },
-          parking: 'Validated parking is available at Shibuya Cross Tower Parking (2 hours free for bookings over 10,000 Yen)',
+          parking: 'Validated parking is available at Shibuya Cross Tower Parking (2 hours free for bookings over 10,000 Rupees)',
           cancellationPolicy: 'Full refund for cancellations made >24 hours before the appointment. Less than 24 hours results in a 100% cancellation charge.',
           walkIns: 'Walk-ins are accommodated if a barber is free, but booking is highly recommended.',
         }

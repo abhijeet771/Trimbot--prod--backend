@@ -43,12 +43,12 @@ const SalonSettingsSchema = new Schema<ISalonSettings>(
     workingHours: [WorkingHoursSchema],
     cancellationWindowHours: { type: Number, default: 24 },
     maxAdvanceBookingDays: { type: Number, default: 30 },
-    parkingDetails: { type: String, default: 'Standard parking is available in Shibuya Crossing parking lots. We validate parking for bookings over 10,000 Yen.' },
+    parkingDetails: { type: String, default: 'Standard parking is available in Shibuya Crossing parking lots. We validate parking for bookings over 10,000 Rupees.' },
     contactPhone: { type: String, default: '+81-3-1234-5678' },
     contactEmail: { type: String, default: 'info@trimtokyo.jp' },
     refundPolicy: { type: String, default: 'Cancellations within 24 hours receive a 100% refund. No-shows are non-refundable.' },
-    membershipDetails: { type: String, default: 'VIP Membership offers 15% off all services, priority scheduling, and free grooming treatments for 5,000 Yen/month.' },
-    giftCardDetails: { type: String, default: 'Digital gift cards are available from 3,000 Yen up to 50,000 Yen. Non-expiry and redeemable for any cut/product.' },
+    membershipDetails: { type: String, default: 'VIP Membership offers 15% off all services, priority scheduling, and free grooming treatments for 5,000 Rupees/month.' },
+    giftCardDetails: { type: String, default: 'Digital gift cards are available from 3,000 Rupees up to 50,000 Rupees. Non-expiry and redeemable for any cut/product.' },
   },
   { timestamps: true }
 );
