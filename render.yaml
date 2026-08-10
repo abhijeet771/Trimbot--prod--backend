@@ -1,0 +1,36 @@
+services:
+  # 1. Backend Web Service
+  - type: web
+    name: trimtokyo-backend
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build:server
+    startCommand: npm run start:server
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false # User will set this in Render dashboard
+      - key: JWT_SECRET
+        sync: false # User will set this in Render dashboard
+      - key: AI_PROVIDER
+        value: groq
+      - key: AI_MODEL_NAME
+        value: llama-3.1-8b-instant
+      - key: GROQ_API_KEY
+        sync: false # User will set this in Render dashboard
+      - key: CLIENT_URL
+        sync: false # User will set this to the frontend static site URL once deployed
+
+  # 2. Frontend Client (Static Site)
+  - type: web
+    name: trimtokyo-frontend
+    env: static
+    plan: free
+    buildCommand: npm install && npm run build:client
+    publishDir: client/dist
+    envVars:
+      - key: VITE_API_URL
+        sync: false # Set this to the backend web service URL (e.g. https://trimtokyo-backend.onrender.com/api)
