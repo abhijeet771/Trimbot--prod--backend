@@ -28,7 +28,6 @@ services:
   - type: web
     name: trimtokyo-frontend
     runtime: static
-    plan: free
     buildCommand: npm install && npm run build:client
     staticPublishPath: ./client/dist
     envVars:
