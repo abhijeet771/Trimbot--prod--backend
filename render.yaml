@@ -27,10 +27,10 @@ services:
   # 2. Frontend Client (Static Site)
   - type: web
     name: trimtokyo-frontend
-    env: static
+    runtime: static
     plan: free
     buildCommand: npm install && npm run build:client
-    publishDir: client/dist
+    staticPublishPath: ./client/dist
     envVars:
       - key: VITE_API_URL
         sync: false # Set this to the backend web service URL (e.g. https://trimtokyo-backend.onrender.com/api)
