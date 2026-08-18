@@ -4,7 +4,7 @@ services:
     name: trimtokyo-backend
     env: node
     plan: free
-    buildCommand: npm install && npm run build:server
+    buildCommand: npm install --production=false && npm run build:server
     startCommand: npm run start:server
     envVars:
       - key: PORT
@@ -28,7 +28,7 @@ services:
   - type: web
     name: trimtokyo-frontend
     runtime: static
-    buildCommand: npm install && npm run build:client
+    buildCommand: npm install --production=false && npm run build:client
     staticPublishPath: ./client/dist
     envVars:
       - key: VITE_API_URL
